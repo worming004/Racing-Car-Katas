@@ -16,7 +16,6 @@ func (m sensoMock) popNextPressurePsiValue() int {
 func Test_alarm_check_sensoroff(t *testing.T) {
 	mySensor := sensoMock{}
 	alarmToTest := NewAlarm(&mySensor)
-
 	values := []int{17, 18, 19, 20, 21}
 
 	for _, v := range values {
@@ -26,7 +25,6 @@ func Test_alarm_check_sensoroff(t *testing.T) {
 			shouldBeOff(t, alarmToTest)
 		})
 	}
-
 }
 
 func Test_alarm_check_sensoron(t *testing.T) {
