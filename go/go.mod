@@ -1,3 +1,3 @@
 module github.com/emilybache/Racing-Car-Katas/go
 
-go 1.13
+go 1.16

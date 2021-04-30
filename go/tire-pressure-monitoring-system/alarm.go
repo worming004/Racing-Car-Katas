@@ -20,15 +20,16 @@ func (a *alarm) check() {
 
 	if p < a.lowPressureThreshold || a.highPressureThreshold < p {
 		a.alarmOn = true
+	} else {
+		a.alarmOn = false
 	}
 }
 
-func NewAlarm() Alarm {
+func NewAlarm(sensor Sensor) *alarm {
 	return &alarm{
 		lowPressureThreshold:  17,
 		highPressureThreshold: 21,
 		alarmOn:               false,
-		sensor:                NewSensor(),
+		sensor:                sensor,
 	}
-
 }
